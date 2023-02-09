@@ -6,8 +6,8 @@ import { authentication } from "utils/firebase";
 import "./style.scss";
 
 export default function FormComp() {
-  const [number, setNumber] = useState();
-  const [otp, setOtp] = useState();
+  const [number, setNumber] = useState("");
+  const [otp, setOtp] = useState("");
   const [expandForm, setExpandForm] = useState(false);
 
   const handleInputChange = (e) => {
@@ -31,6 +31,8 @@ export default function FormComp() {
           alert("Wrong OTP");
           console.log(error);
         });
+    } else {
+      alert("Please enter valid OTP");
     }
   };
 
@@ -50,14 +52,17 @@ export default function FormComp() {
     if (number.length === 13) {
       setExpandForm(true);
       generateRecaptcha();
+      let phoneNumber = number;
       let appVerifier = window.recaptchaVerifier;
-      signInWithPhoneNumber(authentication, number, appVerifier)
+      signInWithPhoneNumber(authentication, phoneNumber, appVerifier)
         .then((confirmationResult) => {
           window.confirmationResult = confirmationResult;
         })
         .catch((error) => {
           console.log(error);
         });
+    } else {
+      alert("Please enter valid phone number");
     }
   };
 
