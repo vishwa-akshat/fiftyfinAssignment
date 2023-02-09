@@ -1,1 +1,30 @@
-// #ccd6d4 #f9fcf8 #466443 #748373 #a7afb0 #324f53
+.container {
+  display: flex;
+  height: 100vh;
+
+  .content-wrapper {
+    width: 50%;
+    background: #f9fcf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .logo-wrapper {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      color: #324f53;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+  .image-wrapper {
+    width: 50%;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.form-wrapper {
+  width: 21rem;
+  text-align: center;
+
+  .title {
+    font-weight: 400;
+    font-size: 2.1rem;
+    color: #324f53;
+    margin: 0;
+  }
+  .subtitle {
+    margin: 0.1rem 0 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #324f53;
+  }
+  .input-label {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #324f53;
+    margin-bottom: 0.3rem;
+  }
+
+  .label-info {
+    display: block;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #324f53c4;
+    margin-top: 0.3rem;
+  }
+
+  .form-input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0 0 0 0.8rem;
+    border: 1px solid #ccd6d4;
+
+    &::placeholder {
+      color: #a7afb0;
+      font-size: 0.85rem;
+    }
+  }
+
+  .submit-btn {
+    margin-top: 2rem;
+    width: 100%;
+    height: 2.5rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    background-color: #466443;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #748373;
+    }
+  }
+}
